@@ -1,0 +1,210 @@
+
+<!-- begin header-top -->
+<header>
+  <div class="header-top">
+    <div class="p150">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href=""><img class="navbar-brand" src="../../../assets/image/logo.png" alt="" style="width: 120px; height: 50px"></a>
+      <!-- hiển thị ngày tháng năm -->
+      <div>
+        <p>{{getDate()}}</p>
+      </div>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search this blog">
+        <div class="input-group-append">
+          <button class="btn btn-secondary bg-primary" type="button">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <div class="login">
+
+        <li class="menu-li" >
+
+        </li>
+
+        <i class="far fa-user"></i>
+        <app-login-register></app-login-register>
+
+      </div>
+    </nav>
+  </div>
+  </div>
+  <!-- end header top -->
+  <!-- begin header bot -->
+  <div class="header-bottom" id="myHeaderBottom">
+    <div class="p150">
+      <ul class="menu-ul">
+        <li class="menu-li">
+          <a title="" routerLink = "/home">
+            <i class="fas fa-home"></i>
+          </a>
+        </li>
+        <li class="menu-li">
+          <a title="" href="">
+          MEDIA
+          </a>
+        </li>
+        <ng-container *ngFor="let items of item;index as i" >
+          <li class="menu-li" *ngIf="i<18">
+            <a (click) = showCategory(i) routerLink = "{{items.parent.router()}}">{{items.parent.title | uppercase}} </a>
+          </li>
+        </ng-container>
+
+      </ul>
+    </div>
+</div>
+</header>
+
+<ng-template #content let-modal>
+  <div class="login-page">
+      <mat-card class="mat-elevation-z12">
+       <div class="title-top">
+        <mat-card-title class="title">Tài khoản </mat-card-title>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+       </div>
+        <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+          <mat-tab label="Đăng Nhập">
+              <mat-card-content>
+                <form action="">
+                  <mat-form-field>
+                    <input
+                      matInput
+                      placeholder="Email"
+                      required
+                      name="email"
+                      ngModel
+                      #email="ngModel">
+                      <mat-error *ngIf="email.invalid">Vui lòng nhập email</mat-error>
+                    <mat-icon matSuffix>email</mat-icon>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input
+                      matInput
+                      placeholder="Password"
+                      type="password"
+                      required
+                      minlength="6"
+                      name="password"
+                      ngModel
+                      #password="ngModel">
+                      <mat-error
+                        *ngIf="password.errors && password.errors.required">
+                        Vui lòng nhập mật khẩu
+                      </mat-error>
+                      <mat-error
+                        *ngIf="password.errors && password.errors.minlength">
+                        Mật khẩu phải dài hơn 6 kí tự
+                      </mat-error>
+                    <mat-icon matSuffix>lock</mat-icon>
+                  </mat-form-field>
+                  <div class="remember">
+                  <mat-checkbox>Nhớ tài khoản</mat-checkbox>
+                 <a href="#">Quên mật khẩu?</a>
+                </div>
+                  <button
+                    mat-raised-button
+                    color="primary"
+                    class="login-button" >
+                    Đăng Nhập
+                  </button>
+
+                  <button
+                    mat-raised-button
+                    class="login-button">
+                    Login with Google
+                  </button>
+                  <button  mat-raised-button
+                  class="login-button">
+                  Login with Facebook
+
+                  </button>
+
+                </form>
+              </mat-card-content>
+          </mat-tab>
+          <mat-tab label="Đăng Kí">
+            <mat-card-content>
+              <form action="">
+                <mat-form-field>
+                  <input
+                    matInput
+                    placeholder="User Name"
+                    required
+                    name="username"
+                    ngModel
+                    #username="ngModel">
+                  <mat-icon matSuffix>perm_identity</mat-icon>
+                  <mat-error
+                    *ngIf="username.invalid">
+                   Vui lòng nhập tên tài khoản
+                  </mat-error>
+
+                </mat-form-field>
+                <mat-form-field>
+                  <input
+                    matInput
+                    placeholder="Email"
+                    required
+                    name="email"
+                    ngModel
+                    #email="ngModel">
+                    <mat-error *ngIf="email.invalid">Vui lòng nhập email</mat-error>
+                  <mat-icon matSuffix>email</mat-icon>
+                </mat-form-field>
+                <mat-form-field>
+                  <input
+                    matInput
+                    placeholder="Password"
+                    type="password"
+                    required
+                    minlength="6"
+                    name="password"
+                    ngModel
+                    #password="ngModel">
+                    <mat-error
+                      *ngIf="password.errors && password.errors.required">
+                     Vui lòng nhập mật khẩu
+                    </mat-error>
+                    <mat-error
+                      *ngIf="password.errors && password.errors.minlength">
+                      Mật khẩu phải dài hơn 6 kí tự
+                    </mat-error>
+                  <mat-icon matSuffix>lock</mat-icon>
+                </mat-form-field>
+                <mat-form-field>
+                    <input
+                    matInput
+                    placeholder="Password"
+                    type="password"
+                    required
+                    minlength="6"
+                    name="repassword"
+                    ngModel
+                    #repassword="ngModel">
+                    <mat-error
+                      *ngIf="repassword.errors && repassword.errors.required">
+                      Xác nhận mật khẩu
+                    </mat-error>
+                  <mat-icon matSuffix>lock</mat-icon>
+
+                </mat-form-field>
+                <mat-checkbox>Đồng ý với điều khoản và chính sách bảo mật</mat-checkbox>
+                <button
+                  mat-raised-button
+                  color="primary"
+                  class="login-button" >
+                  Đăng Kí
+                </button>
+              </form>
+            </mat-card-content>
+          </mat-tab>
+        </mat-tab-group>
+      </mat-card>
+    </div>
+    </ng-template>
+
+
+

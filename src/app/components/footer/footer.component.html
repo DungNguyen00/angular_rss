@@ -1,0 +1,62 @@
+<button id="btscrolltotop" (click)="scrolltotop()">
+  <i class="material-icons">arrow_upward</i>
+</button>
+<footer>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+<button id="btscrolltotop" (click)="scrolltotop()">
+  <i class="material-icons">arrow_upward</i>
+</button>
+<body>
+<!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container d-inline-flex py-4">
+      <div class="me-md-auto text-center text-md-start logo">
+        <a href="#"><img class="navbar-brand" src="../../../assets/image/logo.png" alt="" style="width: 120px; height: 50px"></a>
+      </div>
+      <div class="me-md-auto text-center text-md-start link-social">
+        <p>Theo dõi chúng tôi tại:</p>
+        <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+            <div class="col-sm-8 footer-links">
+                <ul>
+                <li *ngFor="let items of item;index as i">
+                    <i class="bx bx-chevron-right"></i>
+                    <a (click) = showCategory(i) routerLink = "{{items.parent.router()}}">{{items.parent.title | uppercase}} </a>
+                </li>
+                </ul>
+            </div>
+          <div class="col-sm-4 footer-newsletter">
+            <h4>Nhập email để nhận tin mới nhất</h4>
+            <form action="" method="post">
+              <input type="email" name="email">
+              <input type="submit" value="Subscribe" style="background-color: #007bff;">
+            </form>
+            <p>Chúng tôi cam kết giữ bí mật địa chỉ email</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-inline-flex py-4">
+      <div class="me-md-auto text-center text-md-start">
+        <p>
+          &copy; Project Front-End Group 13
+        </p>
+      </div>
+      <div class="me-md-auto text-center text-md-end">
+        <div class="copyright">
+          <p>Địa chỉ: Trường đại học Nông Lâm</p>
+          <p>Hotline: xxx-xxxx-xxx</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+ </body>
+</footer>

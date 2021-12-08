@@ -1,0 +1,49 @@
+@import '../../../../../assets/sass/libs/_variables.sass'
+@import '../../../../../assets/sass/libs/_mixins.sass'
+@import '../../../../../assets/sass/libs/_card.sass'
+@import '../../../home/card/categories-card1/categories-card1.component.sass'
+
+
+.band-sm
+    .item-1
+        width: 200px
+
+.card
+    max-width: 200px
+.col-md-8
+    padding: 0px
+    float:left
+    display: table
+    .card-body
+        padding: 0px
+        width: 200px
+.col-md-4
+    padding-left: 0px
+    .thumb
+        width: 200px
+        height:200px
+
+#title *
+  display: inline-flex
+  padding: 0px 2px
+  margin-bottom: 4px
+i
+  margin-top: 5px
+
+ul
+  @include size(100%, 100%)
+  overflow: auto
+  overflow-y: scroll
+  scrollbar-width: none
+  li
+    margin-left: 20px
+    a:hover
+      text-decoration: underline
+.list-hot-news
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+
+.card
+  min-height: 450px
+  max-height: 450px

@@ -1,0 +1,80 @@
+
+.band
+  padding: 0px 0px 5px 0px
+  width: 80%
+  max-width: 1240px
+  min-width: 970px
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: auto
+  grid-gap: 20px
+  @media (min-width: 30em)
+    grid-template-columns: 1fr 1fr
+  @media (min-width: 60em)
+    grid-template-columns: repeat(5, 1fr)
+.card
+  background: white
+  text-decoration: none
+  color: #444
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+  display: flex
+  flex-direction: column
+  min-height: 100%
+  &:hover
+    top: -2px
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2)
+h1
+  font-size: 20px
+  margin: 10px 3px
+p
+  margin: 10px 5px
+.thumb
+  padding-bottom: 60%
+  background-size: cover
+  background-position: center center
+.article
+  padding: 20px
+  flex: 1
+  display: flex
+  flex-direction: column
+.item-3
+  @media (min-width: 60em)
+    grid-column: 3 / span 2
+    h1
+      font-size: 24px
+.item-8
+  min-width: 200px
+  @media (min-width: 60em)
+    grid-column: 5
+    grid-row: 1 / span 2
+  // h1
+  //   font-size: 24px
+  //   margin: 0
+  //   color: #333
+
+  // p
+  //   flex: 1
+  //   line-height: 1.4
+
+  // span
+  //   font-size: 8px
+  //   font-weight: bold
+  //   color: #999
+  //   text-transform: uppercase
+  //   letter-spacing: 0.05em
+  //   margin: 2em 0 0 0
+.new-news
+  padding: 10px 0px
+.view-news
+  border-top: 2px solid #e32
+  padding: 10px 0px
+.catagories-news
+  @extend .view-news
+.catagories2-news
+  @extend .view-news
+.wrapper.middle
+  @extend .view-news
+.wrapper.bottom
+  @extend .view-news
+
+

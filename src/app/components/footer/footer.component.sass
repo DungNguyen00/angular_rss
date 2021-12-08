@@ -1,0 +1,121 @@
+/*--------------------------------------------------------------
+ *# Footer
+ *--------------------------------------------------------------
+@import '../../../assets/sass/libs/_variables.sass'
+@import '../../../assets/sass/libs/_mixins.sass'
+#footer
+  margin-left: 50px
+  color: #444444
+  font-size: 14px
+  background: #CCF9FC
+  box-shadow: 0px 2px 15px rgba(18, 66, 101, 0.08)
+  p
+    font-weight: bold
+    margin: 0px 0px
+  .footer-top
+    padding: 10px 0px
+    background: #fff
+    .container
+      margin-left: 0px
+      margin-right: 0px
+      .row
+        padding: 0px 0px 0px 150px
+    .footer-links
+      padding: 0px 0px
+
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+      display: grid
+      grid-template-columns: 150px 150px 150px 150px
+      grid-template-rows: 30px 30px 30px 30px
+
+      a
+        color: $menu-items-color
+        transition: 0.3s
+        display: inline-block
+        line-height: 1
+        font: bold 11px/normal Roboto
+
+        &:hover
+          text-decoration: none
+          color: $hover-color
+
+  .footer-newsletter
+    font-size: 15px
+    p
+      margin: 5px 0px 0px 0px
+    h4
+      font-size: 16px
+      font-weight: bold
+      color: #444444
+      position: relative
+      padding: 8px 0px
+
+    form
+      //margin-top: 30px
+      background: #fff
+      //padding: 6px 10px
+      position: relative
+      border-radius: 5px
+      text-align: left
+      border: 1px solid #cde5f6
+
+      input
+        &[type="email"]
+          border: 0
+          padding: 4px 8px
+          width: calc(100% - 100px)
+
+        &[type="submit"]
+          position: absolute
+          top: -1px
+          right: -2px
+          bottom: -1px
+          border: 0
+          background: none
+          font-size: 16px
+          padding: 0 20px 2px 20px
+          background: #2487ce
+          color: #fff
+          transition: 0.3s
+          border-radius: 0 5px 5px 0
+          box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)
+
+          &:hover
+            background: #3194db
+.container.d-inline-flex.py-4
+  padding: 10px 10px 10px 150px!important
+  .me-md-auto.text-center.text-md-start.link-social
+    display: -webkit-inline-box
+    padding-left: 655px
+    padding-top: 0px
+    p,a
+      margin: 0px 4px
+
+    .me-md-auto.text-center.text-md-start.logo
+      padding-top: 0px
+    .me-md-auto.text-center.text-md-start
+      padding-top: 10px
+  .me-md-auto.text-center.text-md-end
+    padding-left: 550px
+
+  .text-center
+    text-align: center!important
+#btscrolltotop
+  position: fixed
+  right: 10px
+  bottom: 10px
+  width: 35px
+  height: 35px
+  border-radius: 50%
+  border: none
+  background: #CCCCCC
+  box-shawdow: 0 0 10px rgba(0, 0, 0, 0.25)
+  color: #444444
+  outline: none
+  z-index: 100
+  opacity: 0.6
+#btcrolltotop:active
+  background: #33FFCC

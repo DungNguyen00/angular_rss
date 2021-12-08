@@ -1,0 +1,48 @@
+
+@import '../../../../../assets/sass/libs/_variables.sass'
+@import '../../../../../assets/sass/libs/_mixins.sass'
+@import '../../../../../assets/sass/libs/_card.sass'
+@import '../categories-card1/categories-card1.component.sass'
+
+.categories-2 
+    position: relative
+    width: 100%
+    margin: 20px 0px
+    overflow: hidden
+    margin-top: 0
+    height: 200px
+    border-radius: 2px
+    border: 1px solid #00000033
+    border-left: 1px solid #81b4ff7a
+    border-bottom: 1px solid #81b4ff7a
+    a 
+        color: white
+    img 
+        width: 100%
+        object-fit: cover
+        height: 100%
+        transition: all 0.2s ease-in
+    
+    .title 
+        position: absolute
+        bottom: 0
+        padding: 10px
+        background: #03296374
+        width: 100%
+        p 
+            font-size: 13px
+            font-weight: 500
+            text-overflow: ellipsis
+            overflow: hidden
+            display: -webkit-box
+            -webkit-line-clamp: 3
+            -webkit-box-orient: vertical
+        
+        .time 
+            font-size: 11px
+            font-weight: 400
+.categories-2:hover 
+    img 
+        transform: scale(1.05)
+.description 
+    font-size: 11px

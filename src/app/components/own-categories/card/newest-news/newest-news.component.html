@@ -1,0 +1,19 @@
+<div class="catagories-list" style="width: 300px;margin-bottom: 10px;">
+  <div class="band-sm">
+    <div *ngFor="let item of ['item-1']" class="{{item}}">
+      <a href='{{items.linkDetail}}' class="card" style="max-width: 280px; max-height: 100px;" target="blank">
+        <div class="row no-gutters" style="min-height:100px;">
+          <div class="col-md-4">
+            <div class="thumb" style="background-image: url({{items.linkImg}})"></div>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{items.title}}</h5>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,39 @@
+<app-header></app-header>
+<section id="content">
+  <div class="content">
+    <div class="p150">
+      <div class="wrapper top">
+        <div class="banner_left">
+          <span class="catagories-title" style="color: red;"> <b>TIN HOT</b></span>
+          <div *ngFor="let i of items;index as id">
+            <app-newest-news [item]='i' *ngIf="id >10 && id < 18">
+            </app-newest-news>
+
+          </div>
+          <img src="../../../assets/image/banner/banner3.png">
+        </div>
+        <span class="catagories-title" style="color: red;"> <b>TIN NỔI BẬT</b></span>
+        <div *ngFor="let i of items;index as id" class="list">
+          <app-top-news [item]='i' *ngIf="id<2"></app-top-news>
+        </div>
+        <div style=" padding-top: 10px;">
+          <i class="fa fa-angle-double-up" aria-hidden="true" style="margin-right: 3px;"></i>
+          <span class="catagories-title" style="color: red;"> <b>TIN MỚI NHẤT</b></span>
+        </div>
+        <div class="new-news" style=" margin-left: 10px; display: flex; margin-right: 10px;">
+          <div *ngFor="let i of items;index as id" style="z-index: 1;">
+            <app-hot-news [item]='i' *ngIf="id>1 && id< 5"></app-hot-news>
+          </div>
+        </div>
+        <br>
+        <span class="catagories-title" style="color: red;"> <b>TIN MỚI</b></span>
+        <div *ngFor="let i of items;index as id" class="list">
+          <app-most-view-news [item]='i' *ngIf="id>4">
+          </app-most-view-news>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

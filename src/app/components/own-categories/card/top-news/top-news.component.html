@@ -1,0 +1,10 @@
+<div class="band">
+  <div *ngFor="let item of ['item-1']" class="{{item}}">
+    <a href='{{items.linkDetail}}' class="card" target="blank">
+      <div class="thumb" style="background-image: url({{items.linkImg}})"></div>
+      <article>
+        <h1>{{items.title}}</h1>
+        <p>{{items.description}}</p>
+      </article>
+    </a>
+  </div>

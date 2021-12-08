@@ -1,0 +1,120 @@
+<app-header></app-header>
+<section id="content">
+  <div class="content">
+    <div class="content-top">
+      <div class="content-trending">
+        <ul class="trending" box-type="trendingboxhome">
+          <li>
+            <span>
+              <i class="fas fa-chart-line"></i>
+            </span>
+          </li>
+          <li *ngFor="let items of arrTin">
+            <a class="alert alert-dark" href="">
+              {{items}}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="tinmoinhat"><i class="fa fa-clock-o" aria-hidden="true"></i><span>Tin Mới Nhất</span></div>
+    <div class="content-mid p150">
+      <!-- muc trending -->
+
+      <div class="content-child-1">
+
+        <div class="content-child-1-1">
+          <div class="content-child-1-1-1" style="width: 50%; ">
+            <ng-container>
+              <div class="dinhdang">
+                <div class="child-1-1" *ngFor="let i of items;index as id">
+                  <app-categories-card2 [item]='i' *ngIf="id<1"></app-categories-card2>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+          <div class="content-child-1-1-2" style="width: 50%;">
+            <div class="child-1-1" *ngFor="let i of items;index as id">
+              <app-categories-card2 [item]='i' *ngIf="id>0 && id<2"></app-categories-card2>
+            </div>
+          </div>
+        </div>
+        <div class="content-child-1-2">
+          <div class="content-child-1-1-2" style="width: 100%;">
+            <div class="child-1-1" *ngFor="let i of items;index as id">
+              <app-categories-card2 [item]='i' *ngIf="id>1 && id<3"></app-categories-card2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-child-2">
+        <div class="new-hot"><i class="fa fa-angle-double-up" aria-hidden="true" style="margin-right: 3px;"></i>
+          <span>Tin Hot</span>
+        </div>
+        <div *ngFor="let i of items;index as id" style="z-index: 1; margin-bottom: 10px;">
+          <app-categories-card1 [item]='i' *ngIf="id>2 && id< 6"></app-categories-card1>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="p150 content-new-news">
+      <div style="margin-left: 20px; padding-top: 10px;"><i class="fa fa-angle-double-up" aria-hidden="true"
+          style="margin-right: 3px;"></i>
+        <span> Tin nổi bật</span>
+      </div>
+      <div class="new-news">
+        <div *ngFor="let i of items;index as id" style="z-index: 1;">
+          <app-new-news-card [item]='i' *ngIf="id>5 && id< 10"></app-new-news-card>
+        </div>
+
+      </div>
+    </div>
+    <div class="p150 content-view-news" style="width: 100%; z-index: 1;">
+      <div style="margin-left: 20px; padding-top: 10px;"><i class="fa fa-angle-double-up" aria-hidden="true"
+          style="margin-right: 3px;"></i>
+        <span>Xem nhiều</span>
+      </div>
+      <div class="view-news">
+        <div *ngFor="let i of items;index as id" style="z-index: 10;">
+          <app-categories-card1 [item]='i' *ngIf="id>9 && id <14 "></app-categories-card1>
+        </div>
+
+      </div>
+      <div class="view">
+        <div *ngFor="let i of items;index as id" style="z-index: 10;">
+          <app-categories-card1 [item]='i' *ngIf="id>15 "></app-categories-card1>
+        </div>
+
+      </div>
+    </div>
+    <div class="xemthem" style="margin-left: 200px;"><i class="fa fa-angle-double-up" aria-hidden="true"></i><span>Xem
+        Thêm</span></div>
+    <div class="p150 content-bot">
+      <div class="content-bot-1" style="min-height: 450px; max-height: 500px;">
+        <div class="content-bot-1-1">
+          <div class="bot-1-1" *ngFor="let i of items;index as id">
+            <app-view-news-card [item]='i' *ngIf="id>13 && id<15"></app-view-news-card>
+          </div>
+        </div>
+        <div class="content-bot-1-2">
+          <div class="bot-1-2" *ngFor="let i of items;index as id">
+            <app-view-news-card [item]='i' *ngIf="id>14 && id<16"></app-view-news-card>
+          </div>
+        </div>
+      </div>
+      <div class="content-bot-2">
+        <div><a href="https://tuoitre.vn/chi-vi-cai-dien-thoai-20210912090222606.htm" target="blank">
+            <img
+              src="https://cdn.tuoitre.vn/zoom/230_143/2021/9/12/tranh-biem-hoa-thiet-bi-hoc-online-hoc-sinh-1629455921-16314120676351442511120-crop-16314120793901706819648.jpeg"
+              alt=""></a></div>
+        <div class="img-qc">
+          <a href="https://tiki.vn/cua-hang/bao-tuoi-tre" target="blank">
+            <img src="https://static-cmsads.admicro.vn/cmsads/2021/05/BAN--1622283837002.jpeg" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
+
